@@ -1,5 +1,4 @@
-<p style="font-size:77px;text-align:center;">🤗</p>
-<h1 align="center">warm welcome action</h1>
+<h1 align="center">warm welcome action 🤗</h1>
 <p align="center">GitHub Action to give a warm welcome on PRs 💖</p>
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/bntzio/warm-welcome-action?style=flat-square)
