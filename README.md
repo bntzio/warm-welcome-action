@@ -23,17 +23,17 @@ on:
     branches:
       - master
 jobs:
-  test:
+  post_welcome_gif:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.0.0
-    - name: grab and post gif and message
-      id: warm_welcome
-      uses: bntzio/warm-welcome-action@latest
-      with: 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
+      - uses: actions/checkout@v2.0.0
+      - name: post welcome gif
+        id: post_welcome_gif
+        uses: bntzio/warm-welcome-action@latest
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
 ```
 
 That's all! 🙂 now every time someone opens a new pull request on your repository this action will trigger and it'll publish a warm welcoming GIF! 💖
