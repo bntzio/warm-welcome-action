@@ -24,7 +24,9 @@
   "author": "notiz.dev",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0"
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^4.0.0",
+    "axios": "^0.20.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",

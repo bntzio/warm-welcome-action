@@ -1,21 +1,34 @@
-name: "test"
-on: # rebuild any PRs and main branch changes
+name: "Warm Welcome Workflow"
+on:
   pull_request:
+  issues: 
+    types: [opened]
   push:
     branches:
       - master
       - 'releases/*'
-
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: run action
-      id: run_action
+      - uses: actions/checkout@v2.0.0
+      - uses: actions/setup-node@v1.4.0
+        with:
+          node-version: 12.x
+      - run: |
+          npm i
+          npm run build
+          npm run pack
+  test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.0.0
+    - name: run gif action
+      id: gif_action
       uses: ./
       with: 
-        my_input: 'World'
-
-    - name: log action output
-      run: echo ${{steps.run_action.outputs.my_output}}     
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
+    - name: print gif url
+      run: echo "GIF URL - ${{ steps.prComment.outputs.gif_url }}"

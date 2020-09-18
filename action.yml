@@ -2,9 +2,15 @@ name: 'Warm Welcome Action'
 description: 'GitHub Action to give a warm welcome on PRs'
 author: 'bntz.io'
 inputs:
-  my_input:
-    description: 'input description here'
-    default: 'World'
+  GITHUB_TOKEN:
+    description: 'Your GitHub token for authentication'
+    required: true
+  GIPHY_TOKEN:
+    description: 'Your Giphy token to fetch the gifs'
+    required: true
+outputs:
+  gif_url:
+    description: 'The PR GIF url'
 runs:
   using: 'node12'
   main: 'dist/index.js'
