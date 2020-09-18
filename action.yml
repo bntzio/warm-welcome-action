@@ -1,6 +1,6 @@
-name: 'Github Action Template'
-description: 'simple typescript template for building GitHub Actions'
-author: 'notiz.dev'
+name: 'Warm Welcome Action'
+description: 'GitHub Action to give a warm welcome on PRs'
+author: 'bntz.io'
 inputs:
   my_input:
     description: 'input description here'
@@ -9,5 +9,5 @@ runs:
   using: 'node12'
   main: 'dist/index.js'
 branding:
-  color: "yellow"
-  icon: "bell"  
+  color: "blue"
+  icon: "heart"
