@@ -1,8 +1,9 @@
 {
-  "name": "github-action-template",
+  "name": "warm-welcome-action",
   "version": "0.0.0",
   "private": true,
-  "description": "TypeScript template action",
+  "author": "Enrique Benitez <bntz.io>",
+  "description": "GitHub Action to give a warm welcome on PRs",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
@@ -12,16 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/notiz-dev/github-action-template"
+    "url": "git+https://github.com/bntzio/warm-welcome-action"
   },
   "keywords": [
+    "github",
     "actions",
-    "node",
-    "setup",
-    "typescript",
-    "GitHub"
+    "dev",
+    "hackathon"
   ],
-  "author": "notiz.dev",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.0",
