@@ -1,6 +1,6 @@
 {
   "name": "warm-welcome-action",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "author": "Enrique Benitez <bntz.io>",
   "description": "GitHub Action to give a warm welcome on PRs",
